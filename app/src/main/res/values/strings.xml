@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Ujianlgi</string>
+    <string name="berita">1</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cnbc">CNBC\n</string>
+    <string name="antara">CNN</string>
+    <string name="bbc">Merdeka</string>
+    <string name="title">title</string>
+    <string name="desc">desc</string>
+    <string name="date">date</string>
+    <string name="cnn">CNN\n</string>
+    <string name="merdeka">Merdeka</string>
+    <string name="HelloWorld">Hello World</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_cnbc"
+        android:icon="@drawable/baseline_newspaper_24"
+        android:title="@string/cnbc"/>
+    <item
+        android:id="@+id/menu_cnn"
+        android:icon="@drawable/baseline_newspaper_24"
+        android:title="@string/antara"/>
+    <item
+        android:id="@+id/menu_merdeka"
+        android:icon="@drawable/baseline_newspaper_24"
+        android:title="@string/bbc"/>
+</menu>
