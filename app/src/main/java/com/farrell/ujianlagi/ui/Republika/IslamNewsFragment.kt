@@ -1,4 +1,4 @@
-package com.farrell.ujianlagi.ui.CnnNews
+package com.farrell.ujianlagi.ui.Republika
 
 import NewsRepository
 import android.os.Bundle
@@ -10,13 +10,14 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.farrell.ujianlagi.R
 import com.farrell.ujianlagi.adapter.NewsAdapter
-import com.farrell.ujianlagi.databinding.FragmentTerbaruNewsBinding
+import com.farrell.ujianlagi.databinding.FragmentInternasionalNewsBinding
+import com.farrell.ujianlagi.databinding.FragmentIslamNewsBinding
 import com.farrell.ujianlagi.ui.NewsViewModel
 import com.farrell.ujianlagi.utils.NewsViewModelFactory
 
-class TerbaruNewsFragment : Fragment() {
+class IslamNewsFragment : Fragment() {
 
-    private lateinit var binding: FragmentTerbaruNewsBinding
+    private lateinit var binding: FragmentIslamNewsBinding
     private val commonViewModel: NewsViewModel by viewModels {
         NewsViewModelFactory(NewsRepository())
     }
@@ -24,9 +25,9 @@ class TerbaruNewsFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?): View?
-    {
-        binding = FragmentTerbaruNewsBinding.inflate(inflater, container, false)
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentIslamNewsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -34,8 +35,8 @@ class TerbaruNewsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val mAdapter = NewsAdapter()
-        commonViewModel.getCnnTerbaruNews()
-        commonViewModel.CnnTerbaruNews.observe(viewLifecycleOwner) { newsResponse ->
+        commonViewModel.getRepublikaIslamlNews()
+        commonViewModel.RepublikaIslamNews.observe(viewLifecycleOwner) { newsResponse ->
             val articles = newsResponse.data?.posts
             articles?.let {
                 mAdapter.setData(it.filterNotNull())

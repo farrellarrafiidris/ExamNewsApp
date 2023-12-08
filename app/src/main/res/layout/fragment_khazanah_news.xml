@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.CnbcNews.TeknologiNewsFragment">
+    tools:context=".ui.Republika.KhazanahNewsFragment">
 
 
     <ProgressBar
@@ -19,10 +19,13 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_quran"
+        android:id="@+id/rv_news"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item_news_row" />
+        tools:listitem="@layout/item_news_row"
+        android:paddingHorizontal="10dp"/>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

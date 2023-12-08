@@ -10,13 +10,15 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.farrell.ujianlagi.R
 import com.farrell.ujianlagi.adapter.NewsAdapter
-import com.farrell.ujianlagi.databinding.FragmentTerbaruNewsBinding
+import com.farrell.ujianlagi.databinding.FragmentEkonomiNewsBinding
+import com.farrell.ujianlagi.databinding.FragmentHiburanNewsBinding
 import com.farrell.ujianlagi.ui.NewsViewModel
 import com.farrell.ujianlagi.utils.NewsViewModelFactory
 
-class TerbaruNewsFragment : Fragment() {
 
-    private lateinit var binding: FragmentTerbaruNewsBinding
+class EkonomiNewsFragment : Fragment() {
+
+    private lateinit var binding: FragmentEkonomiNewsBinding
     private val commonViewModel: NewsViewModel by viewModels {
         NewsViewModelFactory(NewsRepository())
     }
@@ -24,9 +26,9 @@ class TerbaruNewsFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?): View?
-    {
-        binding = FragmentTerbaruNewsBinding.inflate(inflater, container, false)
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentEkonomiNewsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -34,8 +36,8 @@ class TerbaruNewsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val mAdapter = NewsAdapter()
-        commonViewModel.getCnnTerbaruNews()
-        commonViewModel.CnnTerbaruNews.observe(viewLifecycleOwner) { newsResponse ->
+        commonViewModel.getCnnEcoNews()
+        commonViewModel.CnnEcoNews.observe(viewLifecycleOwner) { newsResponse ->
             val articles = newsResponse.data?.posts
             articles?.let {
                 mAdapter.setData(it.filterNotNull())

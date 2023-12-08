@@ -5,20 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.farrell.ujianlagi.R
-import com.farrell.ujianlagi.adapter.CnnPagerAdapter
-import com.farrell.ujianlagi.adapter.MerdekaPagerAdapter
-import com.farrell.ujianlagi.databinding.FragmentCnnNewsBinding
-import com.farrell.ujianlagi.databinding.FragmentMerdekaNewsBinding
+import com.farrell.ujianlagi.adapter.RepublikaPagerAdapter
+import com.farrell.ujianlagi.databinding.FragmentRepublikaNewsBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
-class MerdekaNewsFragment : Fragment() {
-    lateinit var binding: FragmentMerdekaNewsBinding
+class RepublikaNewsFragment : Fragment() {
+    lateinit var binding: FragmentRepublikaNewsBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentMerdekaNewsBinding.inflate(inflater, container, false)
+        binding = FragmentRepublikaNewsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -29,12 +26,12 @@ class MerdekaNewsFragment : Fragment() {
     }
 
     private fun setUpViewPager() {
-        binding.vpNews.adapter = MerdekaPagerAdapter(this)
+        binding.vpNews.adapter = RepublikaPagerAdapter(this)
 
         val tabsList = arrayOf(
-            "Budaya",
-            "Ekonomi",
-            "Politik"
+            "Internasional",
+            "Islam",
+            "Khazanah"
         )
         TabLayoutMediator(binding.tabs, binding.vpNews) { tab, page ->
             tab.text = tabsList[page]

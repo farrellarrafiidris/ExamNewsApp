@@ -3,9 +3,9 @@ package com.farrell.ujianlagi.adapter
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.farrell.ujianlagi.ui.home.CnbcNewsFragment
-import com.farrell.ujianlagi.ui.CnbcNews.LocalNewsFragment
-import com.farrell.ujianlagi.ui.CnbcNews.NasionalNewsFragment
-import com.farrell.ujianlagi.ui.CnbcNews.TeknologiNewsFragment
+import com.farrell.ujianlagi.ui.CnbcNews.MarketNewsFragment
+import com.farrell.ujianlagi.ui.CnbcNews.TechNewsFragment
+import com.farrell.ujianlagi.ui.CnbcNews.LifestyleNewsFragment
 
 class CnbcPagerAdapter(fa: CnbcNewsFragment) : FragmentStateAdapter(fa) {
 
@@ -13,10 +13,10 @@ class CnbcPagerAdapter(fa: CnbcNewsFragment) : FragmentStateAdapter(fa) {
 
     override fun createFragment(position: Int): Fragment {
         return when(position){
-            0 -> LocalNewsFragment()
-            1 -> NasionalNewsFragment()
-            2 -> TeknologiNewsFragment()
-            else -> LocalNewsFragment()
+            0 -> MarketNewsFragment()
+            1 -> TechNewsFragment()
+            2 -> LifestyleNewsFragment()
+            else -> MarketNewsFragment()
         }
     }
 

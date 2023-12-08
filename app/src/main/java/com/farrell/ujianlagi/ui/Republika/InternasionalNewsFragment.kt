@@ -1,4 +1,4 @@
-package com.farrell.ujianlagi.ui.CnnNews
+package com.farrell.ujianlagi.ui.Republika
 
 import NewsRepository
 import android.os.Bundle
@@ -8,15 +8,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.farrell.ujianlagi.R
 import com.farrell.ujianlagi.adapter.NewsAdapter
-import com.farrell.ujianlagi.databinding.FragmentTerbaruNewsBinding
+import com.farrell.ujianlagi.databinding.FragmentInternasionalNewsBinding
 import com.farrell.ujianlagi.ui.NewsViewModel
 import com.farrell.ujianlagi.utils.NewsViewModelFactory
 
-class TerbaruNewsFragment : Fragment() {
 
-    private lateinit var binding: FragmentTerbaruNewsBinding
+class InternasionalNewsFragment : Fragment() {
+
+    private lateinit var binding: FragmentInternasionalNewsBinding
     private val commonViewModel: NewsViewModel by viewModels {
         NewsViewModelFactory(NewsRepository())
     }
@@ -24,9 +24,9 @@ class TerbaruNewsFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?): View?
-    {
-        binding = FragmentTerbaruNewsBinding.inflate(inflater, container, false)
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentInternasionalNewsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -34,8 +34,8 @@ class TerbaruNewsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val mAdapter = NewsAdapter()
-        commonViewModel.getCnnTerbaruNews()
-        commonViewModel.CnnTerbaruNews.observe(viewLifecycleOwner) { newsResponse ->
+        commonViewModel.getRepublikaInternasionalNews()
+        commonViewModel.RepublikaInternasionalNews.observe(viewLifecycleOwner) { newsResponse ->
             val articles = newsResponse.data?.posts
             articles?.let {
                 mAdapter.setData(it.filterNotNull())
@@ -45,6 +45,7 @@ class TerbaruNewsFragment : Fragment() {
                 }
             }
         }
+
 
     }
 

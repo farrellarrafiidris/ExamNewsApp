@@ -2,14 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/menu_cnbc"
-        android:icon="@drawable/baseline_newspaper_24"
+        android:icon="@drawable/cnbc"
         android:title="@string/cnbc"/>
     <item
         android:id="@+id/menu_cnn"
-        android:icon="@drawable/baseline_newspaper_24"
+        android:icon="@drawable/cnn"
         android:title="@string/antara"/>
     <item
-        android:id="@+id/menu_merdeka"
-        android:icon="@drawable/baseline_newspaper_24"
-        android:title="@string/bbc"/>
+        android:id="@+id/menu_republika"
+        android:icon="@drawable/republika"
+        android:title="@string/republika" />
 </menu>

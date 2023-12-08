@@ -12,4 +12,7 @@
     <string name="cnn">CNN\n</string>
     <string name="merdeka">Merdeka</string>
     <string name="HelloWorld">Hello World</string>
+    <string name="getting_news">SABAR GES</string>
+    <string name="content_image_news">IMAGE</string>
+    <string name="republika">Republika</string>
 </resources>

@@ -15,8 +15,8 @@
         android:label="fragment_cnbc_news"
         tools:layout="@layout/fragment_cnbc_news" />
     <fragment
-        android:id="@+id/menu_merdeka"
-        android:name="com.farrell.ujianlagi.ui.home.MerdekaNewsFragment"
+        android:id="@+id/menu_republika"
+        android:name="com.farrell.ujianlagi.ui.home.RepublikaNewsFragment"
         android:label="fragment_merdeka_news"
-        tools:layout="@layout/fragment_merdeka_news" />
+        tools:layout="@layout/fragment_republika_news" />
 </navigation>

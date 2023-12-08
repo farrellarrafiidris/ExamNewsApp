@@ -30,8 +30,8 @@ class CnnNewsFragment : Fragment() {
 
         val tabsList = arrayOf(
             "Terbaru",
-            "Trending",
-            "Inovasi"
+            "Ekonomi",
+            "Hiburan"
         )
         TabLayoutMediator(binding.tabs, binding.vpNews) { tab, page ->
             tab.text = tabsList[page]

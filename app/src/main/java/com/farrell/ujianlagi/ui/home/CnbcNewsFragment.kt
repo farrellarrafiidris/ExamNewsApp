@@ -9,11 +9,6 @@ import com.farrell.ujianlagi.adapter.CnbcPagerAdapter
 import com.farrell.ujianlagi.databinding.FragmentCnbcNewsBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
 class CnbcNewsFragment : Fragment() {
     lateinit var binding: FragmentCnbcNewsBinding
     override fun onCreateView(
@@ -34,9 +29,9 @@ class CnbcNewsFragment : Fragment() {
         binding.vpNews.adapter = CnbcPagerAdapter(this)
 
         val tabsList = arrayOf(
-            "Local",
-            "Nasional",
-            "Teknologi"
+            "Market",
+            "Teknologi",
+            "Lifestyle"
         )
         TabLayoutMediator(binding.tabs, binding.vpNews) { tab, page ->
             tab.text = tabsList[page]
